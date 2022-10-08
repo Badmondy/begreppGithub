@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap");
+
+body {
+  min-width: 100vw;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Cutive Mono", monospace;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(254, 252, 255, 0.454);
+  min-height:100vh;
+}
+
+
+.niceCode{
+    display:flex;
+    flex-direction: column;
+    background-color:azure;
+    min-width:100%;
+}
+
+.niceCode ul,li{
+    align-self:center;
+}
+.niceCode p {
+    font-size:110%;
+}
+#status{
+    width:30%;
+}
+
+h2 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+h4 {
+  text-decoration: underline;
+  text-align: center;
+}
+
+.githubFlow{
+    display:flex;
+    flex-direction: column;
+    padding:5%;
+    gap:.3em;
+    font-weight: 600;
+}
+
+.dom{
+    display:flex;
+    flex-direction: column;
+    gap:.4rem;
+    min-width:100%;
+    margin-left:5%;
+}
+.dom button{
+    border:none;
+    font-size:110%;
+    width:40%;
+}
+
+
+.dom button:hover{
+    background-color: rgba(0, 0, 0, 0.236);
+}
+
+.dom img{
+  min-width:10%;
+}
+
+
+#reset{
+    background-color: red;
+    color:white;
+}
+
+#reset:hover{
+    background-color: rgba(0, 0, 0, 0.236);
+}
+.githubFlow code{
+    color:rgb(255, 149, 0);
+}
+.githubFlow p{
+    margin:0;
+}
+
+.flexBox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width:100vw;
+    gap:.5rem;
+    text-align: center;
+    align-items: center;
+    background-color: azure;
+
+}
+
+.flexBox h2{
+    margin:0;
+}
+.T{
+    color:black;
+}
+
+
+.row {
+    display:flex;
+    gap:.2em;
+}
+
+#flexboxcode{
+    color:orange;
+    font-size:100%;
+    
+}
+.column {
+  display:flex;
+  flex-direction: column;
+  gap:.2em;
+}
+
+.red {
+
+  background-color: red;
+  width:5em;
+  height:5em
+}
+.green {
+  text-align: center;
+  color:white;
+  background-color: rgb(17, 166, 17);
+  width:5em;
+  height:5em;
+}
+
+.framework{
+    display:flex;
+    flex-direction: column;
+    min-width:100%;
+    gap:.3em;
+}
+
+.framework img{
+min-width:40%;
+align-self:center;
+}
+
+.framework h4{
+    text-align:left;
+}
+
+.blue {
+
+  background-color: rgb(13, 66, 181);
+  width:5em;
+  height:5em;
+}
+
+
+@media screen and (max-width:900px) {
+    .flexBox{
+        text-align:left;
+    
+    }
+}

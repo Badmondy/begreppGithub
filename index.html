@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>Begrepp och Github</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <section class="githubFlow">
+        <h2>Gitflow</h2>
+        <p>
+          Github flow är ett arbetsätt att jobba med git som möjliggör
+          sammarbete mellan flera personer.
+        </p>
+        <span>
+          En fil sparas i ett grundutförande, därifrån kan alla jobba med olika
+          delar utan risk att förstöra någon annans arbete. Tillexempel kan en
+          Person ha sin verision av grundkoden och jobba med design. Medans den
+          andra jobbar med implementera funktioner i javascript. Sedan
+          sammanförs detta utan att något krockar genom att man kan granska
+          koden innan man sammanför dem till main grundkoden.
+        </span>
+
+        <code>
+          <p>
+            git clone https://githubrep.git --
+            <span class="T">
+              ( Klonar repot och skapar en lokal fil/version på datorn )
+            </span>
+          </p>
+          <p>
+            git status --
+            <span class="T">
+              Kollar nuvarande filer som skiljer sig från grundkoden:
+            </span>
+          </p>
+          <img src="git_status.png" id="status" />
+          <p>git add . -- <span class="T">
+            ( Lägger till allt till commit. )
+          </span></p>
+          <p>
+            git commit -m "La till röd text" --
+            <span class="T">
+              ( Lägger till filerna man vill skicka med en kommentar. )
+            </span>
+          </p>
+          
+          <p>
+            git push --
+            <span class="T">( Skickar det man har commitat till report )</span>
+          </p>
+        </code>
+        <span>Bra praxis är att skapa en egen branch genom att ange:</span>
+        <p>
+          <code>git checkout -b fixarcss</code>
+          -- Det är bra att namnge den nya branchen till något förklarande
+        </p>
+
+        <span>
+          Genom att skapa en annan branch jobbar vi inte längre mot
+          grundkoden(main) utan har vår egen kopia som vi kan pusha hur mycket
+          vi vill utan risk att förstöra någon annan arbete.
+        </span>
+      </section>
+
+      <section class="flexBox">
+        <h2>
+          Flexbox </h2>
+          <sub> <i class="fa-regular fa-circle-question"></i>Inom dem orangea blocken är den aktuella stilstättningen för sidan<i class="fa-regular fa-circle-question"></i></sub>
+          <code id="flexboxcode">
+             [display:flex; flex-direction: column; justify-content: center; align-items: center; gap:.4rem]
+          </code>
+     
+
+        <span>
+          Flexbox är skapat för att förenkla utveckling av responsiva webbsidor.
+          Förr var man tvungen att dela upp hemsidorna till flera separata.
+        </span>
+        <span>
+          Tillexempel: En för mobil och en för större skärmar. Att skapa en sida
+          med ren html och css kunde bli ett stort projekt. Man var tvungen att
+          modifiera enskilda obejekt.
+        </span>
+        <span>
+          Med introduktionen av flexbox förenklades detta, med implentation utav
+          denna metod förändras hemsidan utifrån skärmstorlek automatiskt. Helt
+          perfekt är det inte, utan det kan fortfarande krävas media queries,
+          dock i en mindre omfattning.
+        </span>
+        <h4>Här nedan kommer exempel på flexbox: </h4>
+        <code id="flexboxcode">
+            [display:flex; gap:.2rem]
+         </code>
+        <div class="row">
+          <p>
+            <i class="fa-regular fa-circle-question"></i>
+            -Standard i flexbox - de ställs upp i rad!
+            <code>display:flex</code>
+          </p>
+          <div class="red"></div>
+          <div class="green"></div>
+          <div class="blue"></div>
+        </div>
+        <code id="flexboxcode">
+            [display:flex; flex-direction: column; gap:.2rem]
+         </code>
+        <div class="column">
+          <p>
+            <i class="fa-regular fa-circle-question"></i>
+            -Alla element visas under varandra
+            <code>flex-direction:column;</code>
+          </p>
+          <div class="red"></div>
+          <div class="green"></div>
+          <div class="blue"></div>
+        </div>
+      </section>
+
+      <section class="dom">
+        <h2>Förändra DOM</h2>
+        <span> Att förändra DOM-elements i ett html dokument går att utföra med javascript,
+        </span>
+        <span>Här nedan kommer ett enkelt exempel där vi kommer ändra färg på kuben till svart med hjälp av kod!</span>
+        <div class="green" id="cube">Vi har här en grön kub! </div>
+        <button id="blackBtn">Svart</button><button id="reset">Återställ</button>
+        <span id="explanation">
+        <p class="headerCode">Här hämtar vi själva kuben genom sit [ID]</p>
+        <img src="cod1.png" alt="" srcset="">
+        <p class="headerCode">Här hämtas knappen vi skapat</p>
+        <img src="cod2.png" alt="" srcset="">
+        <p class="headerCode">Vårat reset knapp hämtas</p>
+        <img src="cod3.png" alt="" srcset="">
+        <p class="headerCode">Vi tilldelar eventlisteners, vilket möjligör att vi kan läsa av när användaren klickar på knappen</p>
+        <img src="cod4.png" alt="" srcset="">
+        <p class="headerCode">Funktion för vad som ska ge när knapp 1 trycks</p>
+        <img src="cod5.png" alt="" srcset="">
+        <p class="headerCode">Funktion för återställning av färg.</p>
+        <img src="cod6.png" alt="" srcset="">
+    </span>
+      </section>
+
+      <section class="niceCode">
+        <h2>Begreppet fin kod</h2>
+        <span> Fin kod kan man istället kalla "lätt-läst-kod".
+            <ol>
+                <li>Struktur</li>
+                <li>Förklarande namn</li>
+                <li>Lättläst</li>
+                <li>Anpassning</li>
+                <li>Kommentarer</li>
+            </ol>
+
+            <p>1. Planera och var klar över projektets mål, -vad behövs, -vad är viktigast. Struktrurera upp en mall för hur du tänkt dig programmet ska funka innan du börjar koda.</p>
+            <p>2. Istället för att döpa en knapp till "button1", döp den till ett förklarande namn "changeColorBtn". När problem uppstår eller kunden vill ändra något, hittar du snabbt vart du ska ändra istället för att gå igenom 100 knappar.</p>
+            <p>3. Tänk dig att någon som inte är insatt i ditt projekt enkelt ska förstå vad du menar, och vad alla funktioner m.m. är tänkt att utföra.</p> 
+        <p>4. Anpassa programmet och gå igenom funktioner och t.ex css styling, samt html tags. Finns det upprepande saker? Då finns det garanterat bättre sätt att utföra det på.</p>
+        <p>5. Kommentarer ska inte vara skrivna som en bok, utan kort och koncist vara ett hjälpmedel för att snabbt navigera i koden och förstå dess koncept.</p>    
+           
+
+            
+        </span>
+      </section>
+
+      <section class="framework">
+        <h2>Ramverk</h2>
+        <span> Ramverk är ett sätt att i många fall att skynda på samt förenkla processen för utänkt uppgift. Det finns ingen idé att uppfinna hjulet på nytt(<i>utveckla det däremot ;) </i>). </span>
+        <h3> React </h3>
+        <span>React jobbar utifrån konceptet single page application(<i>SPA</i>). Sidan uppdateras dynamisk och skapas inte på nytt varje gång användaren klickar på något obejekt.</span>
+        <span>Detta ger en snabbare och mer responsiv-sida. Det finns massa verktyg inom React som löser många problem när man utvecklar större projekt. Koden blir "lättläst" och funktionerna som går att implementera finns ej i vanliga javascript tillexempel.
+        Man jobbar ochså utifrån ett reponsivt tankesätt, mobile-first. Detta gör att transaktionen från mobil till PC blir smärtfri.
+        </span>
+    
+
+        <h3> Express </h3>
+
+        <span> Express är enligt min erfranhet ett sätt att skapa en webbserver. Man använder ofta Express i node.js vilket möjligör full kontroll av sin webbserver. Man kan tillexempel kombinera express med react för att enkelt skapa sid navigering.</span>
+        <span> Det eftersträvar att vara "lätt", det ska inte ta upp ondödiga resurser. Samt vara lätt att modifiera.</span>
+        <h4>Exempel från min API byggd med node.js och Express</h4>
+        <img src="express.png" alt="" srcset="">
+
+        <span> Här tilldelar jag olika routes med hjälp av express. Vilket gör att jag kan bestämma vad användaren når under specifik sida. tillexempel:
+            /signup i slutet av URL tar dem till min signup API och sänder uppgifter till en databas. 
+           Medans /login kontrollerar om uppgifterna överenstämmer med vad som finns i databasen.
+        </span>
+
+        <span> <b>Det finns mycket att säga om både REACT och EXPRESS, men detta var ett axplock.</b></span>
+
+      </section>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/5605743a65.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
